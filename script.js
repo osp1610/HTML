@@ -248,7 +248,7 @@ good health and dreams fulfilled.
 <button class="start-btn" onclick="showBirthdayLetter()">Open Your Letter 💌</button>
 </div>
 <div class="cover-photo">
-<img src="images/Joy1.jpg" onerror="this.src='Images/Joy1.jpg'">
+<img src="Images/Joy1.jpg" onerror="this.src='Images/Joy1.jpg'">
 </div>
 </div>
 </section>`;
@@ -337,14 +337,14 @@ function showKrishnaBlessing(){
 function showGallery(){
     hideRightPanel();
     const galleryItems = [
-        {src: "images/Joy2.jpg", title: "A Blooming Smile 🌸", text: "Like these flowers, you brighten every place you go. Your smile makes every moment beautiful."},
-        {src: "images/Joy3.jpg", title: "Grace in Every Step 🌿", text: "Some people look beautiful in pictures. You make every picture come alive with your presence."},
-        {src: "images/Joy4.jpg", title: "Birthday Queen 👑", text: "A smile this genuine deserves a celebration as wonderful as you. Today is all about you."},
-        {src: "images/Joy5.jpg", title: "Elegance Redefined ✨", text: "Traditional or modern, you carry every look with grace, confidence, and effortless beauty."},
-        {src: "images/Joy6.jpg", title: "Pure Happiness 😊", text: "Your laughter is contagious, your joy is unforgettable, and your happiness lights up every heart."},
-        {src: "images/Joy9.jpg", title: "Simply Beautiful 🌼", text: "Beauty isn't just about appearances—it's the kindness, warmth, and happiness you bring wherever you go."},
-        {src: "images/Joy10.jpg", title: "A Heart Full of Love 💖", text: "The love and kindness you share with everyone make this world a little brighter every day."},
-        {src: "images/Joy7.jpg", title: "Forever My Favorite Memory 🎈", text: "Every picture tells a story, but every story becomes special because you're in it."}
+        {src: "Images/Joy2.jpg", title: "A Blooming Smile 🌸", text: "Like these flowers, you brighten every place you go. Your smile makes every moment beautiful."},
+        {src: "Images/Joy3.jpg", title: "Grace in Every Step 🌿", text: "Some people look beautiful in pictures. You make every picture come alive with your presence."},
+        {src: "Images/Joy4.jpg", title: "Birthday Queen 👑", text: "A smile this genuine deserves a celebration as wonderful as you. Today is all about you."},
+        {src: "Images/Joy5.jpg", title: "Elegance Redefined ✨", text: "Traditional or modern, you carry every look with grace, confidence, and effortless beauty."},
+        {src: "Images/Joy6.jpg", title: "Pure Happiness 😊", text: "Your laughter is contagious, your joy is unforgettable, and your happiness lights up every heart."},
+        {src: "Images/Joy9.jpg", title: "Simply Beautiful 🌼", text: "Beauty isn't just about appearances—it's the kindness, warmth, and happiness you bring wherever you go."},
+        {src: "Images/Joy10.jpg", title: "A Heart Full of Love 💖", text: "The love and kindness you share with everyone make this world a little brighter every day."},
+        {src: "Images/Joy7.jpg", title: "Forever My Favorite Memory 🎈", text: "Every picture tells a story, but every story becomes special because you're in it."}
 
     ];
 
