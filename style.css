@@ -179,7 +179,7 @@ animation:floatImage 3s ease-in-out infinite;
 }
 
 .photo-card {
-    min-height: 420px;
+    min-height: auto;
 }
 
 .cute-gif{
@@ -487,12 +487,13 @@ text-shadow:0 0 15px rgba(255,0,120,.45);
 .letter-page,
 .krishna-page,
 .gallery-page{
-    height:100%;
+    min-height:100vh;
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
     text-align:center;
+    padding:24px 12px;
     animation:fadeIn .8s;
 }
 
@@ -587,11 +588,15 @@ max-width:100%;
 .gallery-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-    gap:1.5rem;
+    gap:1.25rem;
     width:100%;
+    max-width:1200px;
+    margin:auto;
+    padding:0;
 }
 
-.photo-card{
+.photo-card,
+.gallery-card{
     background:rgba(255,255,255,.18);
     border:1px solid rgba(255,255,255,.35);
     border-radius:25px;
@@ -602,25 +607,50 @@ max-width:100%;
     flex-direction:column;
 }
 
-.photo-card img{
+.photo-card img,
+.gallery-card img{
     width:100%;
     height:auto;
-    max-height:360px;
+    max-height:320px;
     object-fit:cover;
     object-position:top center;
+    display:block;
 }
 
-.photo-card h3{
-    margin:18px 18px 6px;
+.photo-card h3,
+.gallery-card .card-title{
+    margin:16px 16px 8px;
     color:white;
-    font-size:22px;
+    font-size:1.25rem;
 }
 
-.photo-card p{
-    margin:0 18px 20px;
+.photo-card p,
+.gallery-card .card-text{
+    margin:0 16px 18px;
     color:#f9f2f6;
     line-height:1.7;
     flex:1;
+    font-size:0.95rem;
+}
+
+@media (max-width: 720px) {
+    .gallery-page {
+        padding:18px 12px;
+    }
+    .gallery-title {
+        font-size:2.2rem;
+        margin-bottom:20px;
+    }
+    .photo-card h3,
+    .gallery-card .card-title {
+        font-size:1.1rem;
+        margin:14px 14px 6px;
+    }
+    .photo-card p,
+    .gallery-card .card-text {
+        margin:0 14px 16px;
+        font-size:0.9rem;
+    }
 }
 
 
@@ -708,18 +738,3 @@ padding:30px;
 border-radius:20px;
 box-shadow:0 10px 30px rgba(0,0,0,.1);
 }
-.gallery-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
-max-width:1200px;
-margin:auto;
-padding:40px;
-}
-.gallery-grid img{
-width:100%;
-border-radius:20px;
-box-shadow:0 12px 30px rgba(0,0,0,.2);
-transition:.3s;
-}
-.gallery-grid img:hover{transform:scale(1.05)}

@@ -349,18 +349,24 @@ function showGallery(){
     ];
 
     const cards = galleryItems.map(item => `
-        <div class="photo-card">
-            <img src="${item.src}" alt="${item.title}" onerror="this.closest('.photo-card').style.display='none'">
-            <h3>${item.title}</h3>
-            <p>${item.text}</p>
+        <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card gallery-card h-100 shadow-sm border-0">
+                <img src="${item.src}" class="card-img-top" alt="${item.title}" onerror="this.closest('.col-12').style.display='none'">
+                <div class="card-body">
+                    <h3 class="card-title">${item.title}</h3>
+                    <p class="card-text">${item.text}</p>
+                </div>
+            </div>
         </div>
     `).join("");
 
     document.body.innerHTML= `
         <div class="gallery-page">
-            <h1 class="gallery-title">Beautiful Memories</h1>
-            <div class="gallery-grid">
-                ${cards}
+            <div class="container py-4">
+                <h1 class="gallery-title text-center mb-4">Beautiful Memories</h1>
+                <div class="row gx-3 gy-4">
+                    ${cards}
+                </div>
             </div>
         </div>
     `;
