@@ -212,7 +212,7 @@ function ensureBgMusic(){
     audio.style.display = "none";
 
     const source = document.createElement("source");
-    source.src = "music/birthday.mp3";
+    source.src = "Music/Birthday.mp3";
     source.type = "audio/mpeg";
     audio.appendChild(source);
 
