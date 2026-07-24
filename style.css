@@ -1,0 +1,725 @@
+body{
+margin:0;
+padding:0;
+font-family:Poppins,sans-serif;
+background:linear-gradient(135deg,#ff9a9e,#fad0c4,#fbc2eb);
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:flex-start;
+overflow-x:hidden;
+overflow-y:auto;
+}
+
+.container{
+padding:50px 0 70px;
+}
+
+.glass-card{
+width:100%;
+max-width:760px;
+box-sizing:border-box;
+padding:40px;
+border-radius:25px;
+background:rgba(255,255,255,.25);
+backdrop-filter:blur(15px);
+box-shadow:0 10px 35px rgba(0,0,0,.2);
+position:relative;
+z-index:20;
+min-height:520px;
+margin:0 auto;
+}
+
+.hide-right-panel{
+display:none !important;
+}
+
+.birthday-card{
+  display:grid;
+  grid-template-columns:minmax(0,1.5fr) minmax(240px,1fr);
+  gap:2.25rem;
+  align-items:flex-start;
+  background:linear-gradient(180deg,rgba(255,255,255,.92),rgba(255,255,255,.65));
+  border:1px solid rgba(255,255,255,.4);
+  backdrop-filter:blur(24px);
+  padding:2.2rem;
+  border-radius:2rem;
+  box-shadow:0 35px 80px rgba(236,65,126,.18);
+  position:relative;
+  overflow:hidden;
+}
+
+.birthday-card::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:radial-gradient(circle at top left, rgba(255,255,255,.45), transparent 28%),
+              radial-gradient(circle at bottom right, rgba(255,110,170,.18), transparent 35%);
+  pointer-events:none;
+}
+
+.birthday-card-left{
+  color:#2a0d24;
+  position:relative;
+  z-index:1;
+}
+
+.birthday-card-tag{
+  font-size:0.9rem;
+  font-weight:800;
+  letter-spacing:0.22em;
+  text-transform:uppercase;
+  color:#ff3f7b;
+  margin-bottom:1rem;
+}
+
+.birthday-card-title{
+  font-family:'Great Vibes',cursive;
+  font-size:clamp(3.4rem,5vw,5.4rem);
+  margin:0;
+  line-height:0.95;
+  color:#3f143c;
+}
+
+.birthday-card-text{
+  font-size:clamp(1rem,1.1vw,1.2rem);
+  line-height:1.9;
+  margin:1.4rem 0 2rem;
+  max-width:38rem;
+  color:#582644;
+}
+
+.birthday-card-right{
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  position:relative;
+  z-index:1;
+}
+
+.birthday-card-img{
+  width:100%;
+  max-width:380px;
+  aspect-ratio:3 / 4;
+  object-fit:cover;
+  border-radius:2rem;
+  box-shadow:0 30px 80px rgba(0,0,0,.16);
+  border:2px solid rgba(255,255,255,.7);
+}
+
+@media (max-width: 980px) {
+  .birthday-card{
+    grid-template-columns:1fr;
+    text-align:center;
+    padding:2rem;
+  }
+  .birthday-card-left{
+    align-items:center;
+  }
+  .birthday-card-right{
+    order:1;
+    justify-content:center;
+    margin-bottom:1.75rem;
+  }
+  .birthday-card-title{
+    font-size:clamp(3rem,8vw,4rem);
+  }
+}
+
+.title{
+font-family:'Great Vibes',cursive;
+font-size:65px;
+color:#fff;
+}
+
+.subtitle{
+margin-top:25px;
+color:#fff;
+font-size:22px;
+}
+
+.start-btn{
+background:#ff4d6d;
+color:#fff;
+border:none;
+border-radius:40px;
+padding:15px 45px;
+}
+
+.option-btn{
+background:#fff;
+border:none;
+border-radius:15px;
+padding:15px;
+font-size:20px;
+transition:.3s;
+}
+
+.option-btn:hover{
+background:#ff4d6d;
+color:#fff;
+transform:scale(1.05);
+}
+
+.photo-container{
+position:relative;
+display:inline-block;
+max-width:420px;
+}
+
+.partner-img{
+width:100%;
+max-width:320px;
+height:auto;
+object-fit:cover;
+border-radius:25px;
+border:8px solid rgba(255,255,255,.75);
+box-shadow:0 20px 40px rgba(0,0,0,.25);
+animation:floatImage 3s ease-in-out infinite;
+}
+
+.photo-card {
+    min-height: 420px;
+}
+
+.cute-gif{
+position:absolute;
+top:-45px;
+right:-10px;
+width:110px;
+z-index:1000;
+animation:gifBounce 2s ease-in-out infinite;
+}
+
+.heart{
+position:fixed;
+bottom:-60px;
+pointer-events:none;
+white-space:nowrap;
+font-weight:bold;
+z-index:5;
+animation:floatHeart linear forwards;
+text-shadow:0 0 15px rgba(255,0,120,.45);
+}
+
+@keyframes gifBounce{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-10px);}
+}
+
+@keyframes floatImage{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-12px);}
+}
+
+@keyframes floatHeart{
+0%{transform:translate(0,0) scale(.8);opacity:0;}
+10%{opacity:1;}
+30%{transform:translate(-40px,-30vh) rotate(120deg);}
+60%{transform:translate(40px,-70vh) rotate(240deg);}
+100%{transform:translate(-20px,-120vh) rotate(360deg) scale(1.2);opacity:0;}
+}
+
+/* Hidden by default */
+
+#photoSurprise{
+
+    display:none;
+
+    position:absolute;
+
+    top:50%;
+
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    text-align:center;
+
+    z-index:9999;
+
+}
+
+/* Blast GIF */
+
+.blast-gif{
+
+    width:220px;
+
+}
+
+/* Birthday Text */
+
+.birthday-text{
+
+    color:white;
+
+    font-size:34px;
+
+    margin-top:-20px;
+
+    font-family:'Great Vibes',cursive;
+
+    text-shadow:0 0 20px hotpink;
+
+    animation:zoomText .8s infinite alternate;
+
+}
+
+/* Zoom Animation */
+
+@keyframes zoomText{
+
+    from{
+
+        transform:scale(1);
+
+    }
+
+    to{
+
+        transform:scale(1.1);
+
+    }
+
+}
+
+/* Blast */
+
+.blast-container{
+
+    position:absolute;
+
+    top:50%;
+
+    left:50%;
+
+    transform:translate(-50%,-50%) scale(0);
+
+    font-size:60px;
+
+    opacity:0;
+
+    transition:all .6s ease;
+
+    pointer-events:none;
+
+    z-index:999;
+
+}
+
+/* Show blast */
+
+.blast-container.show{
+
+    transform:translate(-50%,-50%) scale(2.2);
+
+    opacity:1;
+
+}
+
+/* Birthday text */
+
+.birthday-wish{
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:-70px;
+
+    transform:translateX(-50%);
+
+    color:white;
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:38px;
+
+    opacity:0;
+
+    transition:.8s;
+
+    white-space:nowrap;
+
+    text-shadow:0 0 20px hotpink;
+
+}
+
+/* Show text */
+
+.birthday-wish.show{
+
+    opacity:1;
+
+    bottom:-20px;
+
+}
+
+
+
+/* ---------------- Popup ---------------- */
+
+.popup-overlay{
+
+    position:fixed;
+    inset:0;
+
+    background:rgba(0,0,0,.55);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.4s;
+
+    z-index:99999;
+
+}
+
+.popup-overlay.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+.popup-card{
+
+    width:420px;
+
+    padding:35px;
+
+    text-align:center;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,.18);
+
+    backdrop-filter:blur(20px);
+
+    box-shadow:0 20px 50px rgba(0,0,0,.35);
+
+    animation:popupBounce .5s ease;
+
+}
+
+.popup-emoji{
+
+    font-size:70px;
+
+}
+
+.popup-card h2{
+
+    margin:25px 0;
+
+    color:white;
+
+    line-height:1.6;
+
+    font-size:28px;
+
+    font-family:'Poppins',sans-serif;
+
+}
+
+.popup-btn{
+
+    background:#ff4d6d;
+
+    color:white;
+
+    border:none;
+
+    padding:14px 40px;
+
+    border-radius:40px;
+
+    font-size:18px;
+
+    transition:.3s;
+
+}
+
+.popup-btn:hover{
+
+    transform:scale(1.08);
+
+    background:#ff2f57;
+
+}
+
+@keyframes popupBounce{
+
+    0%{
+
+        transform:scale(.4);
+
+        opacity:0;
+
+    }
+
+    60%{
+
+        transform:scale(1.1);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+}
+
+.cover-page,
+.letter-page,
+.krishna-page,
+.gallery-page{
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    animation:fadeIn .8s;
+}
+
+.cover-page.cover-horizontal{
+flex-direction:row;
+justify-content:space-between;
+align-items:flex-start;
+text-align:left;
+flex-wrap:wrap;
+gap:2rem;
+}
+
+.cover-left,
+.cover-right{
+flex:1 1 300px;
+min-width:280px;
+}
+
+@media (max-width: 980px) {
+    .cover-page.cover-horizontal {
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+    }
+    .cover-left,
+    .cover-right {
+        min-width:100%;
+    }
+    .cover-text {
+        max-width:100%;
+    }
+}
+
+.cover-right{
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.cover-photo{
+width:100%;
+max-width:420px;
+padding:1.5rem;
+background:rgba(255,255,255,.18);
+border-radius:30px;
+box-shadow:0 25px 60px rgba(0,0,0,.15);
+}
+
+.cover-photo img{
+width:100%;
+height:auto;
+border-radius:25px;
+object-fit:cover;
+}
+
+.cover-title{
+font-size:60px;
+font-family:'Great Vibes',cursive;
+color:white;
+}
+
+.cover-name{
+font-size:72px;
+letter-spacing:10px;
+color:#ff2f6d;
+margin:0.5rem 0;
+}
+
+.cover-text{
+font-size:22px;
+color:white;
+margin:25px 0 0;
+line-height:1.7;
+max-width:100%;
+    line-height:1.9;
+    color:white;
+    margin:20px 0 20px;
+    max-width:90%;
+}
+
+.peacock{
+    font-size:65px;
+    margin-bottom:20px;
+}
+
+.gallery-title{
+    color:white;
+    font-size:42px;
+    margin-bottom:25px;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:1.5rem;
+    width:100%;
+}
+
+.photo-card{
+    background:rgba(255,255,255,.18);
+    border:1px solid rgba(255,255,255,.35);
+    border-radius:25px;
+    overflow:hidden;
+    backdrop-filter:blur(15px);
+    box-shadow:0 20px 50px rgba(0,0,0,.2);
+    display:flex;
+    flex-direction:column;
+}
+
+.photo-card img{
+    width:100%;
+    height:auto;
+    max-height:360px;
+    object-fit:cover;
+    object-position:top center;
+}
+
+.photo-card h3{
+    margin:18px 18px 6px;
+    color:white;
+    font-size:22px;
+}
+
+.photo-card p{
+    margin:0 18px 20px;
+    color:#f9f2f6;
+    line-height:1.7;
+    flex:1;
+}
+
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(25px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+
+/* ===== Redesigned Birthday Cover ===== */
+.birthday-cover,.cover-page{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:40px;
+background:linear-gradient(135deg,#ffd6e7,#ffeef6);
+}
+.cover-content{
+display:grid;
+grid-template-columns:1.2fr 1fr;
+gap:40px;
+max-width:1200px;
+width:100%;
+background:#fff;
+border-radius:28px;
+padding:40px;
+box-shadow:0 20px 60px rgba(0,0,0,.15);
+}
+.cover-text-section{display:flex;flex-direction:column;justify-content:center}
+.cover-photo img{
+width:100%;
+max-width:420px;
+border-radius:24px;
+display:block;
+margin:auto;
+box-shadow:0 15px 40px rgba(0,0,0,.2);
+object-fit:cover;
+}
+@media(max-width:900px){
+.cover-content{grid-template-columns:1fr;text-align:center}
+}
+
+
+/* ===== Premium Birthday Sections ===== */
+.fadePage{animation:fadeIn .8s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:none}}
+.envelope-page,.letter-page,.krishna-page,.cute-page{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+padding:40px;
+background:linear-gradient(135deg,#fff0f6,#ffe3ec);
+text-align:center;
+}
+.envelope{
+width:220px;height:150px;
+background:#ff7aa2;
+border-radius:12px;
+display:flex;align-items:center;justify-content:center;
+font-size:70px;cursor:pointer;
+box-shadow:0 20px 40px rgba(0,0,0,.2);
+transition:.35s;
+}
+.envelope:hover{transform:scale(1.05) rotate(-2deg)}
+.next-btn,.start-btn{
+padding:14px 30px;
+border-radius:30px;
+font-size:18px;
+}
+#typewriter{
+max-width:900px;
+font-size:1.2rem;
+line-height:1.9;
+background:#fff;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.1);
+}
+.gallery-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+max-width:1200px;
+margin:auto;
+padding:40px;
+}
+.gallery-grid img{
+width:100%;
+border-radius:20px;
+box-shadow:0 12px 30px rgba(0,0,0,.2);
+transition:.3s;
+}
+.gallery-grid img:hover{transform:scale(1.05)}

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday ❤️</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- Floating Hearts -->
+<div id="hearts"></div>
+
+<!-- Main App -->
+<div id="app">
+
+    <!-- ========================= -->
+    <!-- QUIZ SECTION -->
+    <!-- ========================= -->
+
+    <section id="quizSection" class="main-section">
+
+        <div class="container h-100">
+
+            <div class="row align-items-center justify-content-center h-100 g-5">
+
+                <!-- Left -->
+
+                <div class="col-xl-7 col-lg-7 col-md-12">
+
+                    <div class="glass-card">
+
+                        <div id="page"></div>
+
+                    </div>
+
+                </div>
+
+                <!-- Right -->
+
+                <div class="col-xl-5 col-lg-5 col-md-10 text-center">
+
+                    <div class="photo-container">
+
+                        <img
+                            src="images/cutie.gif"
+                            class="cute-gif"
+                            alt="Cute">
+
+                        <img
+                            src="images/Joy1.jpg"
+                            class="partner-img"
+                            id="birthdayPhoto"
+                            onclick="photoSurprise()"
+                            alt="Birthday Girl">
+
+                        <div id="photoSurprise">
+
+                            <div
+                                id="blastContainer"
+                                class="blast-container">
+                                ❤️✨🎉💥🌸
+                            </div>
+
+                            <h2
+                                id="birthdayWish"
+                                class="birthday-wish">
+
+                                🎉 Happy Birthday Jyoti ❤️
+
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</div>
+
+<!-- ================= Popup ================= -->
+
+<div id="popupOverlay" class="popup-overlay">
+
+    <div class="popup-card">
+
+        <div class="popup-emoji">
+            💖
+        </div>
+
+        <h2 id="popupMessage"></h2>
+
+        <button
+            class="popup-btn"
+            onclick="closePopup()">
+
+            Next ❤️
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- Music (Optional) -->
+
+<audio
+id="bgMusic"
+loop>
+
+<source src="music/birthday.mp3" type="audio/mpeg">
+
+</audio>
+
+<!-- Music Button -->
+
+<button
+id="musicBtn"
+class="music-btn">
+
+🎵
+
+</button>
+
+<!-- Loading Screen -->
+
+<div id="loader">
+
+<div class="loader-heart">
+
+❤️
+
+</div>
+
+</div>
+
+<!-- Bootstrap -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- JS -->
+
+<script src="script.js"></script>
+
+</body>
+</html>
