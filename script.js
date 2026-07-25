@@ -240,7 +240,7 @@ document.body.innerHTML=`
 <h5>🎂 HAPPY BIRTHDAY</h5>
 <h1 style="font-size:4rem;margin:.2em 0;font-family:cursive;">Jyoti ❤️</h1>
 <p style="font-size:1.25rem;line-height:1.8">
-Today is all about celebrating you—your smile,
+Today is all about celebrating you, your smile,
 your kindness and every beautiful memory you create.
 May this year bring you endless happiness, success,
 good health and dreams fulfilled.
@@ -285,13 +285,34 @@ typeWriter();
 }
 
 function typeWriter(){
-    const text = `Happy Birthday Jyoti! ❤️
+    const text = `💌 My Dearest Joy,
 
-May your day be filled with laughter, beautiful surprises, and memories that stay with you forever.
+Happy Birthday, Beautiful Girl! ❤️🎉
 
-You deserve every happy moment, every warm hug, and all the love in the world.
+Today is all about celebrating someone who makes life brighter just by being herself. I hope your day is filled with endless laughter, beautiful surprises, delicious cake, and countless reasons to smile.
 
-Keep shining, keep smiling, and always remember how special you are.`;
+From the very first moment I got to know you, I realized there is something truly special about you. Your kindness, your caring heart, your beautiful smile, and the way you spread happiness wherever you go make you one of the most wonderful people I have ever met.
+
+You have this incredible way of making ordinary moments feel extraordinary. Whether you're smiling, laughing, talking, or simply being yourself, everything becomes a little more beautiful because you're there. That's one of the many things I admire about you.
+
+I want you to know that you deserve every happiness this world has to offer. You deserve peaceful days, exciting adventures, genuine friendships, endless success, and all the love your heart can hold. Never doubt how amazing, talented, strong, and beautiful you truly are.
+
+I hope this new year of your life brings you closer to every dream you've been working for. May every challenge make you stronger, every success make you prouder, and every day remind you just how loved and appreciated you are.
+
+Thank you for being the wonderful person you are. Thank you for all the smiles you've unknowingly given me and for making so many moments memorable just by being a part of them.
+
+Always keep smiling because your smile has a way of making the world feel brighter. Keep believing in yourself because you're capable of achieving incredible things. And no matter where life takes you, never forget how special and precious you are.
+
+On your special day, I just want to remind you that you are loved, admired, appreciated, and cherished more than words can ever express.
+
+Happy Birthday once again, My Cutie, My Sunshine, My Favorite Person. ❤️
+
+May your heart always be filled with happiness, your eyes always sparkle with joy, and your life always overflow with love, laughter, and beautiful memories.
+
+Wishing you the happiest birthday ever!
+
+With lots of love,
+❤️ From Someone Who Always Wishes the Best for You`;
     let i = 0;
     const speed = 30;
     const target = document.getElementById("typewriter");
@@ -336,24 +357,99 @@ function showKrishnaBlessing(){
 
 function showGallery(){
     hideRightPanel();
+    // const galleryItems = [
+    //     {src: "Images/Joy11.jpg", title: "Birthday Queen 👑", text: "A smile this genuine deserves a celebration as wonderful as you. Today is all about you."},
+    //     {src: "Images/Joy2.jpg", title: "A Blooming Smile 🌸", text: "Like these flowers, you brighten every place you go. Your smile makes every moment beautiful."},
+    //     {src: "Images/Joy14.jpg", title: "Grace in Every Step 🌿", text: "Some people look beautiful in pictures. You make every picture come alive with your presence."},
+    //     {src: "Images/Joy9.jpg", title: "Simply Beautiful 🌼", text: "Beauty isn't just about appearances—it's the kindness, warmth, and happiness you bring wherever you go."},
+    //     {src: "Images/Joy10.jpg", title: "A Heart Full of Love 💖", text: "The love and kindness you share with everyone make this world a little brighter every day."},
+    //     {src: "Images/Joy13.jpg", title: "A Heart Full of Love 💖", text: "The love and kindness you share with everyone make this world a little brighter every day."},
+
+    //     {src: "Images/Joy7.jpg", title: "Forever My Favorite Memory 🎈", text: "Every picture tells a story, but every story becomes special because you're in it."},
+    //     {src: "Images/Joy4.jpg", title: "Pure Happiness 😊", text: "Your laughter is contagious, your joy is unforgettable, and your happiness lights up every heart."},
+    //     {src: "Images/Joy6.jpg", title: "Simply Beautiful 🌼", text: "Beauty isn't just about appearances—it's the kindness, warmth, and happiness you bring wherever you go."},
+    //     {src: "Images/Joy12.jpg", title: "Pure Happiness 😊", text: "Your laughter is contagious, your joy is unforgettable, and your happiness lights up every heart."},
+
+    //     {src: "Images/Joy5.jpg", title: "Elegance Redefined ✨", text: "Traditional or modern, you carry every look with grace, confidence, and effortless beauty."},
+
+    //     {src: "Images/Joy3.jpg", title: "Forever My Favorite Memory 🎈", text: "Every picture tells a story, but every story becomes special because you're in it."}
+
+    // ];
+
     const galleryItems = [
-        {src: "Images/Joy11.jpg", title: "Birthday Queen 👑", text: "A smile this genuine deserves a celebration as wonderful as you. Today is all about you."},
-        {src: "Images/Joy2.jpg", title: "A Blooming Smile 🌸", text: "Like these flowers, you brighten every place you go. Your smile makes every moment beautiful."},
-        {src: "Images/Joy14.jpg", title: "Grace in Every Step 🌿", text: "Some people look beautiful in pictures. You make every picture come alive with your presence."},
-        {src: "Images/Joy9.jpg", title: "Simply Beautiful 🌼", text: "Beauty isn't just about appearances—it's the kindness, warmth, and happiness you bring wherever you go."},
-        {src: "Images/Joy10.jpg", title: "A Heart Full of Love 💖", text: "The love and kindness you share with everyone make this world a little brighter every day."},
-        {src: "Images/Joy13.jpg", title: "A Heart Full of Love 💖", text: "The love and kindness you share with everyone make this world a little brighter every day."},
+    {
+        src: "Images/Joy11.jpg",
+        title: "Birthday Queen 👑",
+        text: "Every birthday deserves a queen, and today that queen is you. Your happiness is the most beautiful celebration."
+    },
 
-        {src: "Images/Joy7.jpg", title: "Forever My Favorite Memory 🎈", text: "Every picture tells a story, but every story becomes special because you're in it."},
-        {src: "Images/Joy4.jpg", title: "Pure Happiness 😊", text: "Your laughter is contagious, your joy is unforgettable, and your happiness lights up every heart."},
-        {src: "Images/Joy6.jpg", title: "Simply Beautiful 🌼", text: "Beauty isn't just about appearances—it's the kindness, warmth, and happiness you bring wherever you go."},
-        {src: "Images/Joy12.jpg", title: "Pure Happiness 😊", text: "Your laughter is contagious, your joy is unforgettable, and your happiness lights up every heart."},
+    {
+        src: "Images/Joy2.jpg",
+        title: "A Blooming Smile 🌸",
+        text: "Holding flowers in your hands, yet you're the prettiest blossom in the picture. Your smile brightens everything around you."
+    },
 
-        {src: "Images/Joy5.jpg", title: "Elegance Redefined ✨", text: "Traditional or modern, you carry every look with grace, confidence, and effortless beauty."},
+    {
+        src: "Images/Joy14.jpg",
+        title: "A Smile Worth a Thousand Words 😊",
+        text: "One genuine smile from you is enough to make an ordinary moment feel unforgettable."
+    },
 
-        {src: "Images/Joy3.jpg", title: "Forever My Favorite Memory 🎈", text: "Every picture tells a story, but every story becomes special because you're in it."}
+    {
+        src: "Images/Joy9.jpg",
+        title: "Simply Beautiful 🌼",
+        text: "No grand pose, no filters—just you, your beautiful smile, and a moment that feels absolutely perfect."
+    },
 
-    ];
+    {
+        src: "Images/Joy10.jpg",
+        title: "A Heart Full of Love 💖",
+        text: "Your kindness shines brighter than anything else. The warmth you carry is what makes you truly special."
+    },
+
+    {
+        src: "Images/Joy13.jpg",
+        title: "Grace in Every Look 🌺",
+        text: "Every picture tells a different story, but in every story your elegance steals the spotlight."
+    },
+
+    {
+        src: "Images/Joy7.jpg",
+        title: "Love in Your Eyes ❤️",
+        text: "Hidden behind a tiny heart is the smile that has captured my whole heart forever."
+    },
+
+    {
+        src: "Images/Joy4.jpg",
+        title: "Blooming with Happiness 💐",
+        text: "The flowers may be beautiful, but standing beside you, even they seem to fade. Your smile is the real beauty in this picture."
+    },
+
+
+    {
+        src: "Images/Joy6.jpg",
+        title: "Pure Happiness 😊",
+        text: "That joyful smile, the sparkle in your eyes, and your happiness make this one of my favorite memories."
+    },
+
+    {
+        src: "Images/Joy12.jpg",
+        title: "Birthday Joy 🎉",
+        text: "The cake, the celebration, and your glowing smile together make this birthday picture absolutely perfect."
+    },
+
+    {
+        src: "Images/Joy5.jpg",
+        title: "Elegance Redefined ✨",
+        text: "Grace isn't just about what you wear—it's the confidence, charm, and kindness you carry effortlessly."
+    },
+
+    {
+        src: "Images/Joy3.jpg",
+        title: "Forever My Favorite Memory 🎈",
+        text: "Every picture freezes a moment in time, but every moment with you becomes a memory I'll always treasure."
+    }
+];
 
     const cards = galleryItems.map(item => `
         <div class="col-12 col-sm-6 col-lg-3">
